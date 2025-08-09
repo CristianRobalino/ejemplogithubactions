@@ -1,4 +1,3 @@
-cat > .github/workflows/test-script.yml <<'YAML'
 name: Ejecutar pruebas funcionales
 
 on:
@@ -24,4 +23,4 @@ jobs:
 
       - name: Ejecutar pruebas con pytest
         run: pytest -q
-YAML
+

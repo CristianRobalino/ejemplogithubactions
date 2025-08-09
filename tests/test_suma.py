@@ -1,4 +1,4 @@
-cat > tests/test_suma.py <<'PY'
+
 def suma(a, b):
     return a + b
 
@@ -10,4 +10,4 @@ def test_suma_negativos():
 
 def test_suma_mixta():
     assert suma(-2, 3) == 1
-PY
+
