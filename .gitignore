@@ -1,0 +1,6 @@
+cat > .gitignore <<'GIT'
+__pycache__/
+*.pyc
+.env
+venv/
+GIT

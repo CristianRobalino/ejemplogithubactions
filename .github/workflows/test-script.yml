@@ -1,0 +1,27 @@
+cat > .github/workflows/test-script.yml <<'YAML'
+name: Ejecutar pruebas funcionales
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  run-functional-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependencias
+        run: pip install pytest
+
+      - name: Ejecutar pruebas con pytest
+        run: pytest -q
+YAML
